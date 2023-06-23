@@ -39,10 +39,11 @@ const BlogCard = (props) => {
       
     return (
         <Card className={getCardClassname()} highlighted='true' >
+        
             <div style={{minHeight: '400px'}}>
-                <div class="u-align-text--small-to-default p-text--small-caps" style={{}}>
-                    {getArticleCategory(article?._embedded['wp:term'])}
-                </div>
+                <p class="p-text--small-caps">
+                    {getArticleCategory(article?._embedded['wp:term']).toUpperCase()}                
+                </p>
                 
                 <hr style={{backgroundColor: 'transparent', borderBottom: 'dotted 1px #D9D9D9'}}/>
                 <p class="p-heading--4">
