@@ -1,8 +1,14 @@
-// Optionally override some settings
-$color-brand: #fb3b00;
-
-// Import the theme
-@import 'vanilla-framework/scss/build';
-
-// Include the Sass you want
+@import 'vanilla-framework';
 @include vanilla;
+
+.card-pnc {
+    @include vf-highlight-bar($bg-color: $color-mid-dark, $position: top, $over-border: false);
+}
+
+.card-announce {
+    @include vf-highlight-bar($bg-color: $color-caution, $position: top, $over-border: false);
+}
+
+.card-default {
+    @include vf-highlight-bar($bg-color: $color-information, $position: top, $over-border: false);
+}
